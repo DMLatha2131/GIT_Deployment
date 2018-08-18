@@ -10,7 +10,7 @@ def addPart(partfile, mainFile) :
 	with open(partfile, "r") as part:		
 		for line in part :
 			
-			line1 = line.replace('CRMQ2O/src/', '')
+			line1 = line.replace('DemoPkg/src/', '')
 			line1 = line1.split('\n')[0]
 			
 			if line1.endswith('.cls'):
@@ -35,7 +35,7 @@ def addPart(partfile, mainFile) :
 				line1 = line1.split('.')[0] + '.*'
 			elif line1.endswith('.email-meta.xml'):
 				line1 = line1.split('.')[0] + '.*'
-			mainFile.write("<fileset dir=\"CRMQ2O\\src\" includes=\"" + line1 + "\"/>\n")
+			mainFile.write("<fileset dir=\"DemoPkg\\src\" includes=\"" + line1 + "\"/>\n")
 	
 main  = open("build.xml", "a+")
 main.truncate()
