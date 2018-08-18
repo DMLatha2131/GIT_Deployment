@@ -49,41 +49,41 @@ addPart("diff.txt", main)
 with open("part2.txt", "r") as diff:
 	for line in diff :
 		main.write(line)
-#import zipfile
-#
-#unpack_dir = 'C:/Users/mdudekula/Desktop/python script/Demopkg'
-#import shutil
-#shutil.rmtree(unpack_dir)
-#
-#print('Extracting ZIP.')
-#archive = zipfile.ZipFile('C:/Users/mdudekula/Desktop/python script/Deploy.zip', 'r')
-#
-## Extract to current directory
-#archive.extractall(unpack_dir)
-#print('ZIP Extracted.')
-#archive.close()
-#
-#all_files=[]
-#pattern_found_in_files=[]
-#files_path='C:/Users/mdudekula/Desktop/python script/Demopkg/classes/'
-#
-#if os.path.exists(files_path) :
-#	dir = os.listdir(files_path)
-#	print(dir)
-#	for file in dir:
-#		if fnmatch.fnmatch(file,'*.cls'):
-#			all_files.append(file)
-#			#
-#	for file in all_files:
-#		abs_file=os.path.abspath(files_path+file)
-#		with open(abs_file,'r') as fp:
-#			file_data=fp.read()
-#			if re.search('@isTest',file_data, re.IGNORECASE):
-#				pattern_found_in_files.append(os.path.splitext(file)[0])
-#				print("Pattern found in the files:%s" % pattern_found_in_files)
-#	for listitem in pattern_found_in_files:
-#		main.write( '<runTest>' + listitem + '</runTest>\n')
-#	
+import zipfile
+
+unpack_dir = 'C:/Users/mdudekula/Desktop/Devops/Workspace/GIT_Deployment/temp/'
+import shutil
+shutil.rmtree(unpack_dir)
+
+print('Extracting ZIP.')
+archive = zipfile.ZipFile('CC:/Users/mdudekula/Desktop/Devops/Workspace/GIT_Deployment/Deploy.zip', 'r')
+
+# Extract to current directory
+archive.extractall(unpack_dir)
+print('ZIP Extracted.')
+archive.close()
+
+all_files=[]
+pattern_found_in_files=[]
+files_path='C:/Users/mdudekula/Desktop/Devops/Workspace/GIT_Deployment/temp/classes/'
+
+if os.path.exists(files_path) :
+	dir = os.listdir(files_path)
+	print(dir)
+	for file in dir:
+		if fnmatch.fnmatch(file,'*.cls'):
+			all_files.append(file)
+			#
+	for file in all_files:
+		abs_file=os.path.abspath(files_path+file)
+		with open(abs_file,'r') as fp:
+			file_data=fp.read()
+			if re.search('@isTest',file_data, re.IGNORECASE):
+				pattern_found_in_files.append(os.path.splitext(file)[0])
+				print("Pattern found in the files:%s" % pattern_found_in_files)
+	for listitem in pattern_found_in_files:
+		main.write( '<runTest>' + listitem + '</runTest>\n')
+	
 main.write("</sf:deploy>\n")
 main.write("</target>\n</project>")
 
