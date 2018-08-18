@@ -1,7 +1,7 @@
 <project name="Sample usage of Salesforce Ant tasks" default="test" basedir="." xmlns:sf="antlib:com.salesforce">
 
-    <property file="build.properties"/>
-    <property environment="env"/>
+<property file="build.properties"/>
+<property environment="env"/>
 <target name="DeployPartial">
 <delete file="deploy.zip"/>
  <zip destfile="deploy.zip">
