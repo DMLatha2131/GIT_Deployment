@@ -51,7 +51,7 @@ with open("part2.txt", "r") as diff:
 		main.write(line)
 import zipfile
 
-unpack_dir = 'C:/Users/mdudekula/Desktop/Devops/Workspace/GIT_Deployment/temp/'
+unpack_dir = 'C:/Users/mdudekula/Desktop/Devops/Workspace/GIT_Deployment/Common/temp/'
 import shutil
 shutil.rmtree(unpack_dir)
 
@@ -65,7 +65,7 @@ archive.close()
 
 all_files=[]
 pattern_found_in_files=[]
-files_path='C:/Users/mdudekula/Desktop/Devops/Workspace/GIT_Deployment/temp/classes/'
+files_path='C:/Users/mdudekula/Desktop/Devops/Workspace/GIT_Deployment/Common/temp/classes/'
 
 if os.path.exists(files_path) :
 	dir = os.listdir(files_path)
