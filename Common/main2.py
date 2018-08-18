@@ -56,7 +56,7 @@ import shutil
 shutil.rmtree(unpack_dir)
 
 print('Extracting ZIP.')
-archive = zipfile.ZipFile('CC:/Users/mdudekula/Desktop/Devops/Workspace/GIT_Deployment/deploy.zip', 'r')
+archive = zipfile.ZipFile('C:/Users/mdudekula/Desktop/Devops/Workspace/GIT_Deployment/deploy.zip', 'r')
 
 # Extract to current directory
 archive.extractall(unpack_dir)
