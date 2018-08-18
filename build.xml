@@ -5,7 +5,7 @@
 <target name="DeployPartial">
 <delete file="deploy.zip"/>
  <zip destfile="deploy.zip">
-<fileset dir="CRMQ2O\src" includes="package.xml"/>
+<fileset dir="DemoPkg\src" includes="package.xml"/>
 </zip>
 </target>
 <target name="Deploy">
