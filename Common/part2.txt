@@ -1,7 +1,0 @@
-<fileset dir="DemoPkg\src" includes="package.xml"/>
-</zip>
-</target>
-<target name="Deployzip">
-<echo message="{sf.username}" />
-<sf:deploy zipFile="deploy.zip" allowMissingFiles="true" username="${sf.username}" password="${sf.password}" sessionId="${sf.sessionId}" serverurl="${sf.serverurl}" maxPoll ="${sf.maxPoll}" checkOnly="true" >
-
