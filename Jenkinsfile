@@ -20,6 +20,7 @@ node {
 
     stage('checkout source') {
         // when running in multi-branch job, one must issue this command
+	git init
         checkout scm
     }
 
