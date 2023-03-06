@@ -6,7 +6,7 @@ agent any
 stages {
 			stage('Package CI Sandbox') {
 				steps{
-					echo "CI_CREDS name:: "${CI_CREDS}"
+					echo "CI_CREDS name:: ${CI_CREDS}"
 				}
 			}
 		}
