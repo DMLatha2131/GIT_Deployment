@@ -1,5 +1,5 @@
 // Define outside of pipeline block
-def CI_CREDS = env.BRANCH_NAME.replaceAll('\\/','-');
+def CI_CREDS = env.BRANCH_NAME;
 echo CI_CREDS
 pipeline {
 agent any
