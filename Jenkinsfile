@@ -11,7 +11,7 @@ stages {
         stage('Package CI Sandbox') {
             steps {
                 script {
-                    withCredentials ([usernamePassword(credentialsId: 'github-cicd', usernameVariable: 'GIT_USER', passwordVariable: 'GIT_PASSWORD')])
+                    withCredentials ([usernamePassword(credentialsId: '7b68ae10-113f-4220-a78a-09519f63db37', usernameVariable: 'GIT_USER', passwordVariable: 'GIT_PASSWORD')])
                     {
                        sh '''
                             git config diff.renamelimit 999999
