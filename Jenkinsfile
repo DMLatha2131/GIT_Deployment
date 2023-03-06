@@ -8,7 +8,6 @@ agent any
         BRRANCH_NAME = "${env.BRANCH_NAME}"
     }  
 stages {
-			stages {
         stage('Package CI Sandbox') {
             steps {
                 script {
